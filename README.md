@@ -12,9 +12,11 @@
 
 <br />
 
-[![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-blueviolet?style=flat-square&logo=anthropic)](https://code.claude.com/docs/en/skills)
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=flat-square)](https://github.com/199-biotechnologies/claude-skill-gpt-pro/pulls)
+[![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-blueviolet?style=for-the-badge&logo=anthropic)](https://code.claude.com/docs/en/skills)
+&nbsp;
+[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
+&nbsp;
+[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](https://github.com/199-biotechnologies/claude-skill-gpt-pro/pulls)
 
 ---
 
