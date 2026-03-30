@@ -237,9 +237,7 @@ MIT -- use it, fork it, adapt it.
 
 <div align="center">
 
-Built by [Boris Djordjevic](https://github.com/longevityboris) at [199 Biotechnologies](https://github.com/199-biotechnologies)
-
-A Claude Code skill for cross-model collaboration.
+Built by [Boris Djordjevic](https://github.com/longevityboris) at [199 Biotechnologies](https://github.com/199-biotechnologies) | [Paperfoot AI](https://paperfoot.ai)
 
 <br />
 
